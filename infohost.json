@@ -1,0 +1,18 @@
+{
+	"host1":{
+		"hostname": "test4",
+		"alias": "hote test",
+		"ip": "192.168.6.1",
+		"tmpl": "",
+		"poller": "",
+		"hostgroup": ""
+	},
+	"host2":{
+		"hostname": "test5",
+		"alias": "hote test",
+		"ip": "192.168.7.1",
+		"tmpl": "",
+		"poller": "",
+		"hostgroup": ""
+	}
+}

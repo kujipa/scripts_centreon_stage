@@ -1,0 +1,10 @@
+## définition d'un hote ##
+
+Name="Test3"
+Alias="Test host"
+IPAdd="133.0.0.1"
+HTemp="generic-active-host"
+Poller="central"
+HGroup="machines_test"
+
+

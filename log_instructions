@@ -1,0 +1,2 @@
+STPL GETMACRO OS-Linux-Load-SNMP
+STPL SETPARAM OS-Linux-Load-SNMP-custom normal_check_interval 2
