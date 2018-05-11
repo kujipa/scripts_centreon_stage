@@ -1,35 +1,66 @@
 # Instructions pour l'utilisation des scripts
 
 ## Ajout d'hotes
-__Script__ : _add_host.py_
+__Script__ : *add_host.py*
 
-La liste des hôtes à ajouter doit être renseignée dans le fichier _infohost.json_
+La liste des hôtes à ajouter doit être renseignée dans le fichier *infohost.json*
 en respectant la structure
 
 Seules les valeurs hostname, alias, ip sont obligatoires
 
 
+
 ## Afficher les élèments
-__Script__ : _show.py_
+__Script__ : *show.py*
 
 Permet d'afficher la liste d'une catégorie d'objet (hôtes, services, ...)
 
 La liste des possibilités est disponible en tapant -h ou --help à la suite du script
 
 
+
 ## Execution d'une suite d'instructions
-__Script__ : _super_script.py_
+__Script__ : *super_script.py*
 
-Permet d'exécuter une suite d'instructions écrites dans le fichier _instructions.txt_
+Permet d'exécuter une suite d'instructions écrites dans le fichier *instructions.txt*
 
-L'historique des commandes exécutées est stocké dans _log_instructions_
+L'historique des commandes exécutées est stocké dans *log_instructions*
+
+
+
+## Afficher tous les hôtes en détails
+__Script__ : *get_host_status.py*
+
+Permet d'afficher la liste détaillée des hosts
+
+
+
+## Afficher tous les services en détails
+__Script__ : *get_service_status.py*
+
+Permet d'afficher la liste détaillée des services
+
+
+
+## Afficher le nombre d'hôtes dans un état anormal
+__Script__ : *get_host_problems.py*
+
+Permet d'afficher le détail des hosts dans un état anormal 
+
+
+
+## Afficher le nombre de services dans un état anormal
+__Script__ : *get_service_problems.py*
+
+Permet d'afficher le détail des services dans un état anormal 
+
 
 
 ## Autres
-__Fichier__ : _configfile.json_
+__Fichier__ : *configfile.json*
 
 Contient les infos de connexion au serveur Centreon
 
-__Fichier__ : _parametres_host.txt_
+__Fichier__ : *parametres_host.txt*
 
 Contient tous les paramètres modifiables sur un host

@@ -4,6 +4,7 @@
 import requests
 import pprint
 import sys
+import json
 
 # Info de configuration
 with open("configfile.json", "r") as fichier:
@@ -13,13 +14,15 @@ with open("configfile.json", "r") as fichier:
 	un = t['USER']
 	pw = t['PASSWORD']
 
+
 # Génération d'un token
 sess = requests.Session()
 
- = sess.post("http://{}/centreon/api/index.php?action=authenticate".format(ip),
+r = sess.post("http://{}/centreon/api/index.php?action=authenticate".format(ip),
 	data={"username":"{}".format(un), "password":"{}".format(pw)})
 
 token = r.json()['authToken']
+
 
 # Affichage de la liste des possibilités
 if sys.argv[1] == "-h" or sys.argv[1] == "--help":
@@ -28,6 +31,7 @@ if sys.argv[1] == "-h" or sys.argv[1] == "--help":
 	print("Entrez votre choix")
 	objet = input()
 
+# Sinon on recupère l'objet demandé
 else:
 	objet=sys.argv[1] 
 
