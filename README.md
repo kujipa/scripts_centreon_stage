@@ -56,6 +56,13 @@ Permet d'afficher le détail des services dans un état anormal
 
 
 
+## Appliquer les changements 
+__Script__ : *applycfg.py*
+
+Permet la prise en compte des changements par Centreon
+
+
+
 ## Autres
 __Fichier__ : *configfile.json*
 
