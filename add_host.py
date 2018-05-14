@@ -32,7 +32,7 @@ def add_host(hostname, alias, ip, tmpl, poller, hostgroup):
 		print("L'hôte {} a bien été ajouté".format(hostname))
 
 # Lecture des hotes contenus dans infohost.json
-with open("infohost.json", "r") as fichier:
+with open("list_info_host.json", "r") as fichier:
 	contenu = fichier.read()
 	t = json.loads(contenu)
 	for k,v in t.items():

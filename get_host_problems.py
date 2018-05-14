@@ -28,7 +28,7 @@ r = sess.get("http://{}/centreon/api/index.php?object=centreon_realtime_hosts&ac
 		headers={"centreon-auth-token": token, 'Content-Type': 'application/json'}
 		)
 
-pprint.pprint(r.json())
+#pprint.pprint(r.json())
 
 a = r.json()
 i,t,d,u=0,0,0,0

@@ -3,7 +3,7 @@
 ## Ajout d'hotes
 __Script__ : *add_host.py*
 
-La liste des hôtes à ajouter doit être renseignée dans le fichier *infohost.json*
+La liste des hôtes à ajouter doit être renseignée dans le fichier *list_info_host.json*
 en respectant la structure
 
 Seules les valeurs hostname, alias, ip sont obligatoires

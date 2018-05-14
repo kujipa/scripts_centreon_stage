@@ -24,9 +24,11 @@ token = r.json()['authToken']
 
 
 # affichage du status des hosts
-r = sess.get("http://{}/centreon/api/index.php?object=centreon_realtime_services&action=list&fields=state,description".format(ip),
+r = sess.get("http://{}/centreon/api/index.php?object=centreon_realtime_services&action=list&fields=id,state".format(ip),
 		headers={"centreon-auth-token": token, 'Content-Type': 'application/json'}
 		)
+
+#pprint.pprint(r.json())
 
 a = r.json()
 i,t,w,c,u=0,0,0,0,0
