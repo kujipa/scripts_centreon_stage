@@ -1,0 +1,5 @@
+HG ADDMEMBER DFG client_ubuntu
+# ceci est un test
+FRA GER ITA
+# new rabbit fox
+kill la kill

@@ -43,25 +43,27 @@ def kolme():
 options = { 1 : yksi , 2 : kaksi , 3 : kolme }
 
 
-# stockage de l'historique des commandes
+# stockage de l'historique des commandes et execution des instructions
 log = open("log_instructions","a")
-
 g = open("instructions.txt","r")
 i = 0
+
 while i < nbrl:
 	b = g.readline()
-	log.write(b)
-	c = b.split()
-	objet = c[0]
-	action = c[1]
-	values = c[2:]
+	if b[0] != '#':    # si la ligne n'est pas un commentaire
+		log.write(b)
+		c = b.split()
+		objet = c[0]
+		action = c[1]
+		values = c[2:]
 
-	r = sess.post("http://{}/centreon/api/index.php?action=action&object=centreon_clapi".format(ip),
-		headers={"centreon-auth-token": token, 'Content-Type': 'application/json'},
-		json={"action":"{}".format(action), "object":"{}".format(objet), "values": options[len(values)]() }
-		)
+		r = sess.post("http://{}/centreon/api/index.php?action=action&object=centreon_clapi".format(ip),
+			headers={"centreon-auth-token": token, 'Content-Type': 'application/json'},
+			json={"action":"{}".format(action), "object":"{}".format(objet), "values": options[len(values)]() }
+			)
 
-	print(r.text)
+		print(r.text)
+
 	i += 1
 
 g.close()

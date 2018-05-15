@@ -71,3 +71,9 @@ Contient les infos de connexion au serveur Centreon
 __Fichier__ : *parametres_host.txt*
 
 Contient tous les paramètres modifiables sur un host
+
+__Fichier__ : *instructions.txt*
+
+Contient une suite d'instructions => une instruction par ligne, format OBJET ACTION PARAMETRES
+Ligne débute par *#* => ligne de commentaire, ne sera pas executé 
+
