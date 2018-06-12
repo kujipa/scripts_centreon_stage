@@ -7,7 +7,7 @@ import sys
 import json
 
 # Info de configuration
-with open("configfile.json", "r") as fichier:
+with open("configfile2.json", "r") as fichier:
 	contenu = fichier.read()
 	t = json.loads(contenu)
 	ip = t['IP_CENTREON']
@@ -24,9 +24,16 @@ r = sess.post("http://{}/centreon/api/index.php?action=authenticate".format(ip),
 token = r.json()['authToken']
 
 
+# Par défaut le poller est "central", mais possible de mettre un poller en argument 
+try:
+	poller = sys.argv[1]
+except:
+	poller="central"
+
+
 # Application de la configuration - prises en compte des changements
 r = sess.post("http://{}/centreon/api/index.php?action=action&object=centreon_clapi".format(ip),
 	headers={"centreon-auth-token": token, 'Content-Type': 'application/json'},
-	json={"values": "central","action":"applycfg"})
+	json={"values": "{}".format(poller),"action":"applycfg"})
 
 pprint.pprint(r.json())

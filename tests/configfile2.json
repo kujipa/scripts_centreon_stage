@@ -1,0 +1,8 @@
+{
+	"CURL":"/usr/bin/curl",
+	"JQ":"/usr/bin/jq",
+	"SED":"/bin/sed",
+	"IP_CENTREON":"192.168.10.91",
+	"USER":"admin",
+	"PASSWORD":"admincentreon"
+}

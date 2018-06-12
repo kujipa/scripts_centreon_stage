@@ -1,5 +1,5 @@
-HG ADDMEMBER DFG client_ubuntu
-# ceci est un test
-FRA GER ITA
-# new rabbit fox
-kill la kill
+# OBJET ACTION Arguments
+#
+#CONTACT ADD "t_name;t_alias;tmail@mail.com;t_pwd;0;1;en_US;local"
+#
+CONTACT SETPARAM "t_alias;svcnotifperiod;workhours"
