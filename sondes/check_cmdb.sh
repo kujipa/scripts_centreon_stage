@@ -68,6 +68,6 @@ fi
 architecture=$(uname -i)
 
 #resultat
-echo "hostname=$hostname;fqdn=$fqdn;ip=$ipadd;os_type=$os_type;os_version=$os_version;architecture=$architecture;manufacturer=$manufacturer;model=$model"
+echo "hostname=$hostname!!fqdn=$fqdn!!ip=$ipadd!!os_type=$os_type!!os_version=$os_version!!architecture=$architecture!!manufacturer=$manufacturer!!model=$model"
 exit 0
 

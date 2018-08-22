@@ -4,5 +4,5 @@
 	"SED":"/bin/sed",
 	"IP_CENTREON":"192.168.66.108",
 	"USER":"admin",
-	"PASSWORD":"admincentreon"
+	"PASSWORD":"centreon"
 }
